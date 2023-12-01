@@ -7,11 +7,16 @@
 </head>
 <body>
     <?php
+    //chamando o controller
         include ("../control/CriarController.php");
+        //instanciando o controller
         $Control = new CriarController();
+        //chamando o método listAll() do controller e passando o prompt 'deletar'
+        //que dita o value do input type submit
         $Control->listAll("Deletar");
-
+        //verifica se algum botao foi acionado
         if(isset($_POST['submit-button'])){
+            //se foi acionado, passa o id no input type=hidden do form para deletar
             $Control->deletar($_POST['hidden']);
         }
 

@@ -22,13 +22,19 @@
 </body>
 </html>
 <?php
+//verifica se o form foi acionado
 if(isset($_POST['submit-button'])){
+    //chamando e instanciando o controller
     include ("../control/CriarController.php");
     $Controller = new CriarController();
+
+    //definindo as variáveis
     $nome = $_POST["nome"];
     $desc = $_POST['desc'];
     $preco = $_POST['preco'];
     $idLoja = $_POST['loja'];
+
+    //chamando o método criar do controller
     $Controller->criar($nome,$desc,$preco,$idLoja);
 }
 ?>

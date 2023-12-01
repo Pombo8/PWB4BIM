@@ -7,8 +7,11 @@
 </head>
 <body>
     <?php
+        //chamando controller
         include ("../control/CriarController.php");
+        //instanciando o controller
         $Controller = new CriarController();
+        //utilizando o método listar() do controller
         $Controller->listar();
     ?>
     <a href="../index.php">Menu</a>
